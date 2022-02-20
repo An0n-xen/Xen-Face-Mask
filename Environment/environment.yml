@@ -1,0 +1,4 @@
+name: tensorflow_OBJDECT
+channels:
+  - defaults
+prefix: C:\ProgramData\Anaconda3\envs\tensorflow_OBJDECT\envs\tensorflow_OBJDECT
