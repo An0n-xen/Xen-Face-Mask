@@ -1,0 +1,21 @@
+Programs to install
+1. Python
+2. Anaconda navigator (note: make sure conda is added to path)
+
+
+Libraries to install
+*opencv - (pip install opencv-pytho==4.5.4.60)
+*numpy (pip install numpy)
+*kivy (python -m pip install kivy[base] kivy_examples)
+*tensorflow (pip install tensorflow)
+*tf-slim  (pip install tf-slim)
+*tensorflow-io  (pip install tensorflow-io)
+*tensorflow-hub (tensorflow-hub)
+*tensorflow-model-optimization
+*tensorflow-metadata
+*tf-models-official  (pip install tf-models-official)
+
+
+Login Info()
+*Username = Admin
+*Password = Project legacy

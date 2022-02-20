@@ -1,0 +1,137 @@
+#:import utils kivy.utils
+WindowManager:
+    Login:
+    MainWindow:
+
+<Login>:
+    name: "login"
+    username: Username
+    password: Password
+
+    canvas.before:
+        Rectangle:
+            source: 'images/image1.jpg'
+            size: self.size
+            pos: self.pos
+
+    FloatLayout:
+        Image:
+            source: 'images/image.png'
+
+        FloatLayout:
+            padding: 20
+            Label:
+                text: 'Username'
+                font_name: 'oswald-stencil'
+                bold: True
+                pos_hint: {'x':0.005,'y':0.23}
+                font_size: 20
+
+            TextInput:
+                id: Username
+                hint_text: 'Username'
+                multiline: False
+                size_hint: (0.5,0.05)
+                pos_hint: {'center_x':0.5,'y':0.63}
+
+
+            Label:
+                text: 'Password'
+                font_name: "oswald-stencil"
+                bold: True
+                pos_hint: {'x':0.005,'y':0.05}
+                font_size: 20
+
+            TextInput:
+                id: Password
+                hint_text: 'Password'
+                password: True
+                multiline: False
+                size_hint: (0.5,0.05)
+                pos_hint: {'center_x':0.5,'y':0.45}
+
+            RoundedButton:
+                id: Login_btn
+                text: 'LOGIN'
+                bold: True
+                font_size:17
+                font_name: 'seasrn'
+                size_hint: (0.15,0.09)
+                pos_hint: {'center_x':0.5,'y':0.3}
+                on_press: root.credentials()
+                on_release: root.release()
+
+            FloatLayout
+                Image:
+                    id: invalid
+                    source: 'images/invalid.png'
+                    size_hint: (0.3,0.3)
+
+                    opacity: 0
+
+                Image:
+                    source: 'images/ProjectLegacy.png'
+                    size_hint: 0.67,0.67
+                    pos_hint: {'center_x':0.51,'y':0.53}
+                    color: (1,0,0,1)
+
+
+<RoundedButton@Button>
+    background_color: (0,0,0,0)
+    canvas.before:
+        Color:
+            rgba: (0,0,0,0.65)
+        RoundedRectangle:
+            size: self.size
+            pos: self.pos
+            radius: [25]
+
+
+<MainWindow>:
+    name: "mainwindow"
+
+
+    canvas.before:
+        Color:
+            rgba: (0.6,0.8,0.9,1)
+        Rectangle:
+            size: self.size
+            pos: self.pos
+
+    Image:
+        source: 'images/ProjectLegacy.png'
+        size_hint: 0.69,0.69
+        pos_hint: {'center_x':0.51,'y':0.53}
+        color: (1,0,0,1)
+
+   
+    FloatLayout:
+        Image:
+            source: 'images/facemask1.png'
+            pos_hint:{'center_y':0.56}
+
+        Button:
+            id: start_engine
+            background_normal: 'images/button3.png'
+            background_down: 'images/button3.png'
+            size_hint: 0.35,0.35
+            pos_hint: {'center_x':0.5,'center_y':0.18}
+            on_press: root.pressed()
+            on_release: root.startengine(), root.released()
+
+        Label:
+            id: systems_id
+            text: '[+]..... Initiating Systems .....[+]'
+            font_size: 25
+            color: (0,0,0,0)
+            font_name: 'oswald-stencil'
+            pos_hint: {'center_y':0.35}
+
+
+        
+
+
+
+
+
+
